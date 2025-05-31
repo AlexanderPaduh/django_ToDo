@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TODO_APP</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<div>
-  <h1>
-    {% now 'h i s u' %}
-    <h1>
-      <h2>Welcome to our TODO</h2>
-      <h2>Starting application, please wait!</h2>
-</div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+  ToDo app index
+{% endblock %}
+{% block body %}
+  <h1>Welcome to our app  TODO</h1>
+  <p>This is the index page</p>
+  <h2>It's {% now "H s F" %}</h2>
+{% endblock %}
