@@ -1,21 +1,10 @@
 {% extends 'todo_list/base.html' %}
 
 {% block title %}
-  ToDo List app
+  ToDo List
 {% endblock %}
 
 {% block body %}
-  <h1> ToDO List App</h1>
-  <ul>
-    {% for todo_item in object_list %}
-      <li>
-        {{ todo_item.title }}
-        {% if todo_item.done %}
-          ✅
-        {% else %}
-          ❌
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  <h3> ToDO List App</h3>
+  {% include 'todo_list/components/todoitems_list.html' %}
 {% endblock %}

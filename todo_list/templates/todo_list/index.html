@@ -6,16 +6,10 @@
 
 {% block body %}
   <h1> ToDO List App</h1>
-  <ul>
-    {% for todo_item in object_list %}
-      <li>
-        {{ todo_item.title }}
-        {% if todo_item.done %}
-          ✅
-        {% else %}
-          ❌
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  <ulv>
+    <li><a href='{% url "todo_list:list" %}'>All todo items</a></li>
+    <li><a href='{% url "todo_list:done" %}'>All done todos items</a></li>
+  </ulv>
+  {% include 'todo_list/components/todoitems_list.html' %}
+
 {% endblock %}
