@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block body %}
-  <h1> ToDO List App</h1>
-  <ulv>
+  <h1> ToDO FEACHURS</h1>
+  <ul>
     <li><a href='{% url "todo_list:list" %}'>All todo items</a></li>
     <li><a href='{% url "todo_list:done" %}'>All done todos items</a></li>
-  </ulv>
+  </ul>
+  <h3>TODO LIST</h3>
   {% include 'todo_list/components/todoitems_list.html' %}
 
 {% endblock %}
