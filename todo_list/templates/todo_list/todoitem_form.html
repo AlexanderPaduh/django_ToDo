@@ -1,0 +1,13 @@
+{% extends 'todo_list/base.html' %}
+
+{% block title %}
+  Create New TODO-item
+{% endblock %}
+
+{% block body %}
+  <h3> Create new TODO</h3>
+  <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <imput type="submit" value="Add"></imput>
+  </form>
+{% endblock %}

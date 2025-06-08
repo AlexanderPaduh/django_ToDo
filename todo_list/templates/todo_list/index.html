@@ -9,6 +9,7 @@
   <ul>
     <li><a href='{% url "todo_list:list" %}'>All todo items</a></li>
     <li><a href='{% url "todo_list:done" %}'>All done todos items</a></li>
+    <li><a href='{% url "todo_list:create" %}'>Create todo item</a></li>
   </ul>
   <h3>TODO LIST</h3>
   {% include 'todo_list/components/todoitems_list.html' %}
