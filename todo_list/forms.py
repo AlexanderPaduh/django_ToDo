@@ -3,24 +3,26 @@ from django import forms
 from todo_list.models import ToDoItem
 
 
-class TodoItemCreateForm(forms.ModelForm):
+class ToDoItemCreateForm(forms.ModelForm):
     class Meta:
         model = ToDoItem
-        fields = ('title','description','done',)
+        fields = ("title", "description")
+
         widgets = {
-            "description":forms.Textarea(attrs={'cols': 30, 'rows': 5}),
+            "description": forms.Textarea(
+                attrs={"cols": 30, "rows": 5},
+            ),
         }
+
         help_texts = {
-            "description":"Some useful description",
+            "description": "Some useful help text.",
         }
 
 
-class TodoItemUpdateForm(forms.ModelForm):
-    class Meta(TodoItemCreateForm.Meta):
-        fields = ('title',
-                  'description',
-                  'done',)
-
-class TodoItemDeleteForm(forms.ModelForm):
-    class Meta(TodoItemCreateForm.Meta):
-        fields = ('title',)
+class ToDoItemUpdateForm(forms.ModelForm):
+    class Meta(ToDoItemCreateForm.Meta):
+        fields = (
+            "title",
+            "description",
+            "done",
+        )

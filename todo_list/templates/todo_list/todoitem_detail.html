@@ -16,9 +16,10 @@
       update todo item
     </a>
   </div>
-  </div>
-    <a href="{% url 'todo_list:deletion' object.pk %}">
-      back to a TODO list
+  <div>
+    <a href="{% url 'todo_list:delete' object.pk %}">
+      delete todo item
     </a>
   </div>
+
 {% endblock %}
