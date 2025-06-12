@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}
-  	base title
+    base title
   {% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<h1>TODOS NAVIGATE</h1>
-{% include 'components/navbar.html' %}
-
-{% block body %}
-  Base Body!!
-{% endblock %}
-
-<footer>
-  &copy Django ToDo app
-  {% block footer %}
-
-  {% endblock %}
-</footer>
+<div class="main-page">
+  <div class="navigate">
+    <h1>TODOS NAVIGATE</h1>
+    {% include 'components/navbar.html' %}
+  </div>
+  <div class="body">
+    {% block body %}
+      Base Body!!
+    {% endblock %}
+  </div>
+  <div class="footer">
+    <footer>
+      &copy Django ToDo app
+      {% block footer %}
+      
+      {% endblock %}
+    </footer>
+  </div>
+</div>
 </body>
 </html>
